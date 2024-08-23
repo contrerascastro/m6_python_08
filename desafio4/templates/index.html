@@ -1,0 +1,25 @@
+{% extends './layouts/base.html' %}
+
+
+{% block title %}
+OnlyFlans
+{% endblock %}
+
+
+{% block content %}
+
+<h1>OnlyFlans</h1>
+<p>Las mejores flanes de la ciudad</p>
+<div class="row">
+{% for data in images %}
+    <div class="col-4">
+        <img class="rounded-circle m-3 border border-warning" 
+        src="{{ data.img }}" 
+        alt="{{data.img}}">
+        <p>{{data.message}}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
